@@ -45201,3 +45201,21 @@ Request URL: /css/ajax-loader.gif
 Stack Trace:
 #0 C:\openserver\OpenServer\domains\sghk.loc\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-01-25 14:09:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/ajax-loader.gif
+Stack Trace:
+#0 C:\OpenServer\domains\sghknew.loc\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-25 14:10:41 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/ajax-loader.gif
+Stack Trace:
+#0 C:\OpenServer\domains\sghknew.loc\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
