@@ -20,7 +20,7 @@
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
-		echo $this->Html->script(array('jquery-2.1.4', 'jquery.mousewheel-3.0.6.pack', 'jquery.fancybox.js?v=2.1.5', 'jquery.fancybox-buttons.js?v=1.0.5', 'jquery.fancybox-media.js?v=1.0.6', 'slick.min'));
+		echo $this->Html->script(array('jquery-2.1.4', 'jquery.mousewheel-3.0.6.pack', 'jquery.fancybox.js?v=2.1.5', 'jquery.fancybox-buttons.js?v=1.0.5', 'jquery.fancybox-media.js?v=1.0.6', 'slick.min','script'));
 	?>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -190,6 +190,26 @@
 			<?php echo $this->fetch('content') ?>
 			<?php echo $this->element('footer') ?>	
 		</div>
+		<div class="mob_part">
+				<ul class="mob_ul">
+					<li class="active"><a href="/">Главная</a></li>
+					<li><a href="news.html">Новости</a></li>
+					<li class="m_sub">
+						<a href="#">Предприятия</a>
+						<ul class="m_undersub">
+							<li><a href="principles.html">Руководство</a></li>
+							<li><a href="sertificates.html">Лицензии и сертификаты</a></li>
+							<li><a href="vacancy.html">Вакансии</a></li>
+							<li><a href="history.html">История</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Продукция</a></li>
+					<li><a href="#">Клиенты</a></li>
+					<li class="sub"><a href="#">Галерея</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<div class="mob_close"></div>
+			</div>
 		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript">
 		 $(document).ready(function() {

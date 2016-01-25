@@ -28,8 +28,8 @@
 				<?php else: ?>
 					<?php foreach ($data as $item) :?>
 						<li>
-							<a href="#"><img src="/img/gallery/<?=$item['Gallery']['img'] ?>" alt="<?=$item['Gallery']['title'] ?>" /></a>
-							<a class="heading" href="#"><?=$item['Gallery']['title'] ?></a>
+							<a class="fancybox" href="#"><img src="/img/gallery/<?=$item['Gallery']['img'] ?>" alt="<?=$item['Gallery']['title'] ?>" /></a>
+							<a class="heading fancybox" href="#"><?=$item['Gallery']['title'] ?></a>
 					    </li>
 			    	<?php endforeach; ?>
 				<?php endif; ?>

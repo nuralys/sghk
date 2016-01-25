@@ -5,7 +5,7 @@
 					<ul class="sert_ul">
 					<?php foreach($data as $item): ?>
 						<li>
-							<img src="/img/certification/thumbs/<?=$item['Certification']['img'] ?>"/>
+							<a class="fancybox" href="#"><img src="/img/certification/thumbs/<?=$item['Certification']['img'] ?>"/></a>
 						</li>
 					<?php endforeach ?>
 						
