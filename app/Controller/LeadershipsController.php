@@ -122,14 +122,14 @@ class LeadershipsController extends AppController{
 			throw new NotFoundException('Такой страницы нет...');
 		}
 		$this->Leadership->locale = Configure::read('Config.language');
-		$this->Leadership->bindTranslation(array('fio' => 'titleTranslation', 'body' => 'bodyTranslation'));
+		$this->Leadership->bindTranslation(array('title' => 'titleTranslation', 'body' => 'bodyTranslation'));
 		$data = $this->Leadership->findById($id);
 		$this->News->locale = Configure::read('Config.language');
 		$news = $this->News->find('all', array(
 			'order' => array('date' => 'desc'),
 			'limit' => 5
 		));
-		$title_for_layout = $data['Leadership']['fio'];
+		$title_for_layout = $data['Leadership']['title'];
 		$meta['keywords'] = $data['Leadership']['keywords'];
 		$meta['description'] = $data['Leadership']['description'];
 		$this->set(compact('data','title_for_layout' , 'meta', 'news'));

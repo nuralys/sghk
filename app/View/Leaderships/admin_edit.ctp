@@ -6,7 +6,7 @@
 	</div>
 <?php 
 echo $this->Form->create('Leadership', array('type' => 'file'));
-echo $this->Form->input('fio', array('label' => 'ФИО:'));
+echo $this->Form->input('title', array('label' => 'ФИО:'));
 echo $this->Form->input('position', array('label' => 'Должность:'));
 // echo $this->Form->input('Leadership.title.kz', array('label' => 'Название kz:'));
 if($this->request->query['lang'] == 'ru'){
