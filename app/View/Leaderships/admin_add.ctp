@@ -6,7 +6,7 @@
 
 echo $this->Form->create('Leadership', array('type' => 'file'));
 
-echo $this->Form->input('fio', array('label' => 'ФИО:'));
+echo $this->Form->input('title', array('label' => 'ФИО:'));
 echo $this->Form->input('position', array('label' => 'Должность:'));
 echo $this->Form->input('date_berth', array('label' => 'Дата рождения:', 'minYear' => date('Y') - 70, 'maxYear' => date('Y') - 18));
 echo $this->Form->input('body', array('label' => 'Текст:', 'id' => 'editor'));

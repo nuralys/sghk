@@ -28,32 +28,14 @@ class HonorsController extends AppController{
 		if($this->request->is('post')){
 			$this->Honor->create();
 			$data = $this->request->data['Honor'];
-			// debug($this->request->data);
-			// debug($data);
-			/*ws begin*/
-			$getmime = getimagesize(WWW_ROOT . trim($data["imgsource"], '/'));
-			$file= end(explode("/",  $data["imgsource"]));
-			$data["img"]= array(
-				"name"=> $file,
-				"tmp_name" => WWW_ROOT . trim($data["imgsource"], '/'),
-				"error"=> 0,
-				"mime"=>$getmime['mime'],
-				"size"=>filesize (WWW_ROOT . trim($data["imgsource"], '/'))
-			);
-			
- 			/*ws end*/
-			 if(!$data['img']['name']){
-			 	unset($data['img']);
+			if(!$data['img']['name']){
+				unset($data['img']);
 			}
 			if(isset($this->request->query['lang']) && $this->request->query['lang'] == 'kz'){
 				$this->Honor->locale = 'kz';
-			}elseif(isset($this->request->query['lang']) && $this->request->query['lang'] == 'en'){
-				$this->Honor->locale = 'en';
 			}else{
 				$this->Honor->locale = 'ru';
 			}
-			// $this->Honor->locale = 'ru';
-
 			if($this->Honor->save($data)){
 				$this->Session->setFlash('Сохранено', 'default', array(), 'good');
 				// debug($data);

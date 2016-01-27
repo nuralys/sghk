@@ -10,7 +10,7 @@ class ClientsController extends AppController{
 		// $this->Client->locale = false;
 		$this->Client->locale = Configure::read('Config.language');
 		$data = $this->Client->find('all', array(
-			'order' => array('order' => 'ASC')
+			'order' => array('id' => 'ASC')
 		));
 		$title_for_layout = __('Клиенты');
 		$this->set(compact('data', 'title_for_layout'));

@@ -159,7 +159,7 @@ class NewsController extends AppController{
 		$this->News->bindTranslation(array('title' => 'titleTranslation', 'body' => 'bodyTranslation'));
 		$post = $this->News->findById($id);
 		$news = $this->News->find('all', array(
-			'fields' => array('id', 'title')
+			'fields' => array('id', 'title', 'img', 'body')
 			));
 		$title_for_layout = $post['News']['title'];
 		$meta['keywords'] = $post['News']['keywords'];

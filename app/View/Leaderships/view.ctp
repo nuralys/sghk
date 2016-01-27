@@ -13,7 +13,7 @@
 						<ul class="ul_news">
 						<?php foreach($news as $item): ?>
 							<li>
-								<a href="#"><img src="img/s1.jpg"/></a>
+								<a href="#"><img src="/img/news/thumbs/<?=$item['News']['img'] ?>"/></a>
 								<div class="as_text">
 									<a href="#"><?=$item['News']['title'] ?></a>
 									<p><?= $this->Text->truncate(strip_tags($item['News']['body']), 148, array('ellipsis' => '...', 'exact' => true)) ?></p>

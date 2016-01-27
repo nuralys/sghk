@@ -3,6 +3,7 @@
 class Honor extends AppModel{
 
 	public $validate = array(
+		
 		'img' => array(
 			'uploadError' => array(
 				'rule' => 'uploadError',
@@ -10,40 +11,35 @@ class Honor extends AppModel{
 				'allowEmpty' => true
 			),
 			'mimeType' => array(
-				'rule' => array('mimeType', array('image/jpg', 'image/jpeg', 'image/png', 'image/gif')),
-				'message' => 'Ошибка загрузки картинки'
+				'rule' => array('mimeType', array('image/gif', 'image/png', 'image/jpg', 'image/jpeg')),
+				'message' => 'Разрешены к загрузке картинки JPG, PNG и GIF',
+				'allowEmpty' => true
 			),
 			'fileSize' => array(
-				'rule' => array('fileSize', '<=', '2MB'),
-				'message' => 'Максимальный размер картинки 2MB'
+				'rule' => array('fileSize', '<=', '1MB'),
+				'message' => 'Максимальный размер файла - 1 Мб',
+				'allowEmpty' => true
 			),
 			'customUploadImg' => array(
 				'rule' => 'customUploadImg',
-				'message' => 'Ошибка обработки обработки картинки'
+				'message' => 'Ошибка обработки загрузки картинки',
+				'allowEmpty' => true
 			)
-		),
-		
+		)
 	);
 
 	public function customUploadImg($file = array()){
-		/*ws begin*/
-		
-		/*if(!is_uploaded_file($file['img']['tmp_name'])){
+		if(!is_uploaded_file($file['img']['tmp_name'])){
 			return false;
-		}*/
+		}
 		$ext = strtolower(preg_replace("#.+\.([a-z]+)$#", "$1", $file['img']['name']));
 		$fileName = $this->genNameFile($ext);
 		$path = WWW_ROOT . 'img/honor/' . $fileName;
 		$path_th = WWW_ROOT . 'img/honor/thumbs/' . $fileName;
-		copy($file['img']['tmp_name'], $path);
-		copy(WWW_ROOT . trim($this->data[$this->alias]["imgcrop"], '/'), $path_th);
-		unlink($file['img']['tmp_name']);
-		unlink(WWW_ROOT . trim($this->data[$this->alias]["imgcrop"]));
-		/*if(!move_uploaded_file($file['img']['tmp_name'], $path)){
+		if(!move_uploaded_file($file['img']['tmp_name'], $path)){
 			return false;
-		}*/
-		//$this->resizeImg($path, $path_th, 553, 415, $ext);
-/*ws end*/
+		}
+		$this->resizeImg($path, $path_th, 187, 141, $ext);
 		$this->data[$this->alias]['img'] = $fileName;
 		return true;
 	}
@@ -55,7 +51,8 @@ class Honor extends AppModel{
 		}
 		return $name;
 	}
-	public function resizeImg($target, $dest, $wmax = 647, $hmax = 647, $ext){
+
+	public function resizeImg($target, $dest, $wmax = 269, $hmax = 178, $ext){
 		/*
 		$target - путь к оригинальному файлу
 		$dest - путь сохранения обработанного файла
@@ -105,6 +102,4 @@ class Honor extends AppModel{
 		}
 		imagedestroy($newImg);
 	}
-
-	
 }
