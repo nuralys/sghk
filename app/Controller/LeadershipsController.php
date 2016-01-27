@@ -18,7 +18,7 @@ class LeadershipsController extends AppController{
 	public function admin_index(){
 		$this->Leadership->locale = 'ru';
 		$this->Leadership->bindTranslation(array(
-			'fio' => 'titleTranslation',
+			'title' => 'titleTranslation',
 			'body' => 'bodyTranslation',
 			'position' => 'positionTranslation',
 			'keywords' => 'keywordsTranslation',
