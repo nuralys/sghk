@@ -51,11 +51,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <?php if(AuthComponent::user()):?>
 
 	<?php echo $this->Html->link('Страницы', '/admin/pages') ?>
+	<?php echo $this->Html->link('Новости', '/admin/news') ?>
 	<?php echo $this->Html->link('Фотогалерея', '/admin/gallery') ?>
 	<?php echo $this->Html->link('Руководство', '/admin/leaderships') ?>
 	<?php echo $this->Html->link('Сертификаты', '/admin/certifications') ?>
-	<?php echo $this->Html->link('Новости', '/admin/news') ?>
 	<?php echo $this->Html->link('Клиенты', '/admin/clients') ?>
+	<?php echo $this->Html->link('Награды', '/admin/honors') ?>
 	<?php echo $this->Html->link('Видео', '/admin/videos') ?>
 	<?php echo $this->Html->link('Выход', '/admin/users/logout') ?>
  <?php else:  ?>

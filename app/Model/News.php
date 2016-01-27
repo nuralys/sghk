@@ -56,7 +56,7 @@ class News extends AppModel{
 		if(!move_uploaded_file($file['img']['tmp_name'], $path)){
 			return false;
 		}
-		$this->resizeImg($path, $path_th, 269, 178, $ext);
+		$this->resizeImg($path, $path_th, 266, 200, $ext);
 		$this->data[$this->alias]['img'] = $fileName;
 		return true;
 	}
