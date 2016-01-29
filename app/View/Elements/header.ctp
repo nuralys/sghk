@@ -38,7 +38,7 @@
 		</div>
 	</li>
 	<li><a href="/<?=$lang?>page/products">Продукция</a></li>
-	<li <?php if($this->request->params['controller']=='clients') echo 'class="active"'?>><a href="/<?=$lang?>clients">Клиенты</a></li>
+	<li <?php if($this->request->params['controller']=='clients') echo 'class="active"'?>><a href="/<?=$lang?>clients">Партнеры</a></li>
 	<li class="sub <?php if($this->request->params['controller']=='gallery' || $this->request->params['controller']=='videos') echo 'active'?>">
 		<p>Галерея</p>
 		<div class="frame">

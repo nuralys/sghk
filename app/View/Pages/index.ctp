@@ -35,7 +35,7 @@
 </section>
 <section class="box clients">
 	<div class="cr">
-		<h5><?= __('Клиенты и партнеры СГХК'); ?></h5>
+		<h5><?= __('Партнеры и клиенты ТОО СГХК'); ?></h5>
 		<div class="partners-items ord_car">
 		<?php foreach($clients as $item): ?>
 			<div class="c_img"><img src="/img/client/thumbs/<?=$item['Client']['img']?>"/></div>		
