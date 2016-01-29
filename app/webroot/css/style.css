@@ -1,4 +1,4 @@
-html {
+fhtml {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -327,15 +327,7 @@ th {
          url('../fonts/HelveticaNeueCyr-Light.ttf') format('truetype'),
          url('../fonts/HelveticaNeueCyr-Light.svg') format('svg');
 }
-@font-face {
-    font-family: 'HelveticaNeue';
-    font-weight:normal;
-    src: url('../fonts/HelveticaNeueCyr-Medium.eot');
-    src: url('../fonts/HelveticaNeueCyr-Mediumr.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
-         url('../fonts/HelveticaNeueCyr-Mediumr.ttf') format('truetype'),
-         url('../fonts/HelveticaNeueCyr-Medium.svg') format('svg');
-}
+
 @font-face {
     font-family: 'HelveticaNeue';
     font-weight:bold;
@@ -346,7 +338,8 @@ th {
          url('../fonts/HelveticaNeueCyr-Bold.svg') format('svg');
 }
 @font-face {
-    font-family: 'HelveticaNeue-roman';
+    font-family: 'HelveticaNeue';
+    font-weight:normal;
     src: url('../fonts/HelveticaNeueCyr-Roman.eot');
     src: url('../fonts/JHelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
          url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
@@ -359,11 +352,14 @@ html{
 
 body{
   font-family: 'HelveticaNeue';
-   font-weight:200;
+   font-weight:normal;
   font-size:14px;
   line-height:18px;
   color:#313131;
   height:100%;
+}
+body.kz{
+  font-family: Calibri,Arial,sans-serif;
 }
 .main{
   max-width:1900px;
@@ -560,6 +556,7 @@ color: #111;
     padding: 8px 12px;
     margin-right: 10px;
     margin: 0 10px 0 0;
+    font-weight: 200;
     display: inline;
 }
 .nav  li.active a,.nav li:hover a,.nav  li.active p,.nav li:hover p{
@@ -981,6 +978,7 @@ color: #111;
     font-size: 14px;
     margin: 0;
     height: 126px;
+    text-align: justify;
     overflow: hidden;
 }
 /*end header*/
@@ -1222,7 +1220,7 @@ h5{
   margin-bottom:-3px;
 }
 .gallery_ul li .img{
-  height:145px;
+  height:152px;
   overflow:hidden;
 }
 .gallery_ul li .heading{

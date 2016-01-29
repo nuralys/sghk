@@ -1,6 +1,6 @@
-<div class="mbg news_bg"></div>				
+<div class="mbg"></div>				
 			<section class="cr bg_w">	
-				<div class="box">
+				<div class="box content">
 					<div class="news_text">
 						<h2><?=$post['News']['title']?></h2>
 						<?php //echo $this->Time->format($post['News']['date'], '%d.%m.%Y', 'invalid'); ?>
