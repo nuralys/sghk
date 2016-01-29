@@ -184,7 +184,7 @@
 		});
 	</script>
 </head>
-<body <?php if(!isset($this->request->params['language']) || $this->request->params['language']=='kz'){echo "class='kz'";}?>>
+<body <?php if(isset($this->request->params['language']) && $this->request->params['language']=='kz'){echo "class='kz'";}?>>
 		<div class="main">
 			<?php echo $this->element('header') ?>
 			<?php echo $this->fetch('content') ?>

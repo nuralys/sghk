@@ -14,7 +14,7 @@
 				</div>
 				<ul class="lang">
 					<li <?php if(!isset($this->request->params['language']) || $this->request->params['language']!='kz'){echo "class='active'";} ?>><a href="/">ru</a></li>
-					<li><a href="/kz" <?php if(!isset($this->request->params['language']) || $this->request->params['language']=='kz'){echo "class='active'";}?>>kz</a></li>
+					<li <?php if(isset($this->request->params['language']) && $this->request->params['language']=='kz'){echo "class='active'";}?>><a href="/kz">kz</a></li>
 				</ul>
 				<select class="lang_m">
 					<option>Рус</option>
