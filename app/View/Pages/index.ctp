@@ -17,7 +17,7 @@
 		<div class="com_row">
 			<h5><?= __('О компании'); ?></h5>
 			<p><?= $this->Text->truncate(strip_tags($page['Page']['body']), 290, array('ellipsis' => '...', 'exact' => true)) ?></p>
-			<a class="read_more" href="/<?=$lang?>pages/about"><?= __('Читать полностью'); ?></a>
+			<a class="read_more" href="/<?=$lang?>page/about"><?= __('Читать полностью'); ?></a>
 		</div>
 		<div class="awards clearfix">
 			<h5><?= __('Наши награды'); ?></h5>
@@ -41,7 +41,7 @@
 </section>
 <section> 
 	<div class="cr sertificates">
-		<h5>Наши сертификаты</h5>
+		<h5><?php echo __('Наши сертификаты'); ?></h5>
 		<div class="sertificates-items ord_car">
 		<?php foreach($certifications as $item): ?>
 		<a class="fancybox" data-fancybox-group="sertificates" href="/img/certification/<?=$item['Certification']['img']?>">
