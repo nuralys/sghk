@@ -6,8 +6,7 @@ foreach ($data as $item) : ?>
 		<?= $title['locale'] .': '. $title['content']; ?><br>
 	<?php endforeach; ?>
 	<?=$item['Leadership']['title']?> Редактировать: <a href="/admin/leaderships/edit/<?=$item['Leadership']['id']?>?lang=ru"> рус</a> |
-	 <a href="/admin/leaderships/edit/<?=$item['Leadership']['id']?>?lang=kz"> каз</a> |
-	 <a href="/admin/leaderships/edit/<?=$item['Leadership']['id']?>?lang=en"> eng</a><br>
+	 <a href="/admin/leaderships/edit/<?=$item['Leadership']['id']?>?lang=kz"> каз</a><br>
 	<div class="news_del">	<?php echo $this->Form->postLink('Удалить', array('action' => 'admin_delete', $item['Leadership']['id']), array('confirm' => 'Подтвердите удаление')); ?>
 			</div> 
 	 <hr>

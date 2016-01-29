@@ -27,7 +27,7 @@
 	<li <?php if($this->request->params['controller']=='pages' && $this->request->params['action']=='index') echo 'class="active"'?>><a href="/<?=$lang?>">Главная</a></li>
 	<li <?php if($this->request->params['controller']=='news') echo 'class="active"'?>><a href="/<?=$lang?>news">Новости</a></li>
 	<li class="sub <?php if($this->request->params['controller']=='leaderships' || $this->request->params['controller']=='certifications') echo 'active'?>">
-		<a href="#">Предприятия</a>
+		<a href="#">Предприятие</a>
 		<div class="frame">
 			<ul class="sub_ul">
 				<li><a href="/<?=$lang?>leaderships">Руководство</a></li>

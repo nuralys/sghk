@@ -72,7 +72,7 @@ class NewsController extends AppController{
 			// debug($this->News->locale);
 			// debug($this->request->data);
 			$data1 = $this->request->data['News'];
-			if(!$data1['img']['name']){
+			if(isset($data1['img']['name']) && !$data1['img']['name']){
 				unset($data1['img']);
 			}
 
