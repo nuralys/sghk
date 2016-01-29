@@ -27,7 +27,7 @@
 	<li <?php if($this->request->params['controller']=='pages' && $this->request->params['action']=='index') echo 'class="active"'?>><a href="/<?=$lang?>">Главная</a></li>
 	<li <?php if($this->request->params['controller']=='news') echo 'class="active"'?>><a href="/<?=$lang?>news">Новости</a></li>
 	<li class="sub <?php if($this->request->params['controller']=='leaderships' || $this->request->params['controller']=='certifications') echo 'active'?>">
-		<a href="#">Предприятия</a>
+		<p>Предприятия</p>
 		<div class="frame">
 			<ul class="sub_ul">
 				<li><a href="/<?=$lang?>leaderships">Руководство</a></li>
@@ -40,7 +40,7 @@
 	<li><a href="/<?=$lang?>page/products">Продукция</a></li>
 	<li <?php if($this->request->params['controller']=='clients') echo 'class="active"'?>><a href="/<?=$lang?>clients">Клиенты</a></li>
 	<li class="sub <?php if($this->request->params['controller']=='gallery' || $this->request->params['controller']=='videos') echo 'active'?>">
-		<a href="/<?=$lang?>">Галерея</a>
+		<p>Галерея</p>
 		<div class="frame">
 			<ul class="sub_ul">
 				<li><a href="/<?=$lang?>gallery/1">Трудовые будни</a></li>

@@ -1,4 +1,4 @@
-<div class="mbg news_bg"></div>				
+<div class="mbg"></div>				
 			<section class="cr bg_w">	
 				<div class="box content">
 					<h2><?=__('Руководство') ?></h2>

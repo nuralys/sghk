@@ -1,3 +1,4 @@
+<div class="mbg"></div>
 <section class="cr bg_w">	
 	<div class="box content">
 		<div class="gallery">

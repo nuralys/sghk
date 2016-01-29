@@ -353,7 +353,9 @@ th {
          url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype'),
          url('../fonts/HelveticaNeueCyr-Roman.svg') format('svg');
 }
-
+html{
+  height:100%;
+}
 
 body{
   font-family: 'HelveticaNeue';
@@ -361,13 +363,18 @@ body{
   font-size:14px;
   line-height:18px;
   color:#313131;
+  height:100%;
 }
 .main{
   max-width:1900px;
   width:100%;
   margin:0 auto;
-
+  position:relative;
+  overflow:hidden;
+  min-height: 100%;
+  margin-bottom: -128px;
 }
+.page-buffer {height: 128px;}
 .cr{
   width:1200px;
   margin:0 auto;
@@ -444,7 +451,7 @@ header figure img{
 	text-decoration:none;	
 	color: #2a2a2a;
 }
-.lang li.active a{
+.lang li.active a,.lang li a:hover{
 	text-decoration:underline;
 }
 .lang_m{
@@ -478,7 +485,8 @@ header figure img{
   position:absolute;
   top:61px;
   left:0px;
-  width:250px;
+  z-index: 21;
+  width:230px;
   padding:20px;
   background-color:#f3f3f3;
   animation: left 0.6s;
@@ -498,10 +506,12 @@ header figure img{
 .mob_ul li:last-child{
   margin-bottom:0;
 }
-.mob_ul li a{
-  color:#111;
-  text-transform:uppercase;
-  text-decoration:none;
+.mob_ul li a,.mob_ul li p{
+color: #111;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
 }
 .m_undersub{
   display:none;
@@ -544,13 +554,15 @@ header figure img{
 	font-size:16px;
 		list-style:none;
 }
-.nav > li > a{
-	color:#222222;
-	text-decoration:none;
-	padding:8px 12px;
-	margin-right:10px;
+.nav > li > a,.nav > li > p{
+    color: #222222;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    margin: 0 10px 0 0;
+    display: inline;
 }
-.nav  li.active a,.nav li:hover a{
+.nav  li.active a,.nav li:hover a,.nav  li.active p,.nav li:hover p{
 	background-color:#2d373f;
 	color:#fff;
 }
@@ -619,10 +631,13 @@ header figure img{
 	background-image:url(../img/ar_left.png);
 	left:-60px;
 }
+
 .multi_top .slick-next{
 	background-image:url(../img/ar_right.png);
 	right:-60px;
 }
+
+
 /*begin slick css*/
 /* Slider */
 .slick-slider
@@ -748,7 +763,7 @@ header figure img{
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
+    background: #fff url('/img/ajax-loader.gif') center center no-repeat;
 }
 /* Arrows */
 .slick-prev,
@@ -935,13 +950,18 @@ header figure img{
     background-color: #fff;
     padding: 14px;
     margin: 2px 30px 3px 30px;
-	overflow:hidden;
-	max-height:420px;
+	   overflow:hidden;
+	   height: 320px;
     box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.42);
+}
+.card .img{
+      height: 161px;
+    overflow: hidden;
+    margin-bottom: 12px;
 }
 .card img{
 	width:100%;
-	margin-bottom:12px;
+  min-height:161px;
 }
 .card .heading{
     color: #616161;
@@ -960,7 +980,7 @@ header figure img{
 .card p{
     font-size: 14px;
     margin: 0;
-    min-height: 126px;
+    height: 126px;
     overflow: hidden;
 }
 /*end header*/
@@ -1048,6 +1068,12 @@ h5{
     height: 82px;
     width: 20px;
 }
+.ord_car .slick-next:hover{
+  background-image:url(../img/ar_right_hover.png);
+}
+.ord_car .slick-prev:hover{
+  background-image:url(../img/ar_left_hover.png);
+}
 .ord_one .slick-prev{
     left:-25px;
 }
@@ -1102,9 +1128,6 @@ h5{
 /*end sertificates*/
 
 /*begin news*/
-.news_bg{
-	background-image:url(../img/news_bg.jpg);
-}
 .bg_w{
     margin-bottom: 25px;
     position: relative;
@@ -1378,7 +1401,7 @@ footer .logo{
       margin:0 35px;
     }
     .mbg{
-      height:540px;
+      height:500px;
     }
     .multi_top .slick-prev {
       left: -12px;
@@ -1387,7 +1410,7 @@ footer .logo{
       right:-12px;
     }
     .index_car {
-      height: 470px;
+      height: 430px;
           width: 100%;
        overflow: hidden;
     }

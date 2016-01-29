@@ -4,7 +4,11 @@
 		<div class="multiple-items multi_top">
 		<?php foreach($news as $item): ?>
 			 <div class="card">
-				<a class="fancybox" href="/<?=$lang?>news/view/<?=$item['News']['id']?>"><img src="/img/news/thumbs/<?=$item['News']['img']?>"/></a>
+				<a class="fancybox" href="/<?=$lang?>news/view/<?=$item['News']['id']?>">
+					<div class="img">
+						<img src="/img/news/thumbs/<?=$item['News']['img']?>"/>
+					</div>
+				</a>
 				<a class="heading" href="/<?=$lang?>news/view/<?=$item['News']['id']?>"><?=$item['News']['title']?></a>
 				<p><?= $this->Text->truncate(strip_tags($item['News']['body']), 250, array('ellipsis' => '...', 'exact' => true)) ?></p>
 			 </div>

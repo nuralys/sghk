@@ -1,3 +1,5 @@
+<div class="page-buffer"></div>
+</div>
 <footer>
 	<div class="cr">
 		<div class="logo">

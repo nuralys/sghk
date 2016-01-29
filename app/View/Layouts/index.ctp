@@ -189,24 +189,31 @@
 			<?php echo $this->element('header') ?>
 			<?php echo $this->fetch('content') ?>
 			<?php echo $this->element('footer') ?>	
-		</div>
 		<div class="mob_part">
 				<ul class="mob_ul">
-					<li class="active"><a href="/">Главная</a></li>
-					<li><a href="news.html">Новости</a></li>
-					<li class="m_sub">
-						<a href="#">Предприятия</a>
-						<ul class="m_undersub">
-							<li><a href="principles.html">Руководство</a></li>
-							<li><a href="sertificates.html">Лицензии и сертификаты</a></li>
-							<li><a href="vacancy.html">Вакансии</a></li>
-							<li><a href="history.html">История</a></li>
-						</ul>
+					<li <?php if($this->request->params['controller']=='pages' && $this->request->params['action']=='index') echo 'class="active"'?>><a href="/<?=$lang?>">Главная</a></li>
+					<li <?php if($this->request->params['controller']=='news') echo 'class="active"'?>><a href="/<?=$lang?>news">Новости</a></li>
+					<li class="m_sub <?php if($this->request->params['controller']=='leaderships' || $this->request->params['controller']=='certifications') echo 'active'?>">
+						<p>Предприятия</p>
+							<ul class="m_undersub">
+								<li><a href="/<?=$lang?>leaderships">Руководство</a></li>
+								<li><a href="/<?=$lang?>certifications">Лицензии и сертификаты</a></li>
+								<li><a href="/<?=$lang?>page/vacancy">Вакансии</a></li>
+								<li><a href="/<?=$lang?>page/history">История</a></li>
+							</ul>
 					</li>
-					<li><a href="#">Продукция</a></li>
-					<li><a href="#">Клиенты</a></li>
-					<li class="sub"><a href="#">Галерея</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="/<?=$lang?>page/products">Продукция</a></li>
+					<li <?php if($this->request->params['controller']=='clients') echo 'class="active"'?>><a href="/<?=$lang?>clients">Клиенты</a></li>
+					<li class="m_sub <?php if($this->request->params['controller']=='gallery' || $this->request->params['controller']=='videos') echo 'active'?>">
+						<p>Галерея</p>
+							<ul class="m_undersub">
+								<li><a href="/<?=$lang?>gallery/1">Трудовые будни</a></li>
+								<li><a href="/<?=$lang?>gallery/2">Отдых</a></li>
+								<li><a href="/<?=$lang?>gallery/3">Спорт</a></li>
+								<li><a href="/<?=$lang?>videos">Видео</a></li>
+							</ul>
+					</li>
+					<li><a href="/<?=$lang?>page/contacts">Контакты</a></li>
 				</ul>
 				<div class="mob_close"></div>
 			</div>
@@ -219,7 +226,7 @@
 			  slidesToScroll: 3,
 			   responsive: [
 			    {
-			      breakpoint: 1240,
+			      breakpoint: 900,
 			      settings: {
 			        slidesToShow: 2,
 			        slidesToScroll: 2
