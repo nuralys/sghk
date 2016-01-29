@@ -11,12 +11,15 @@ echo $this->Form->input('title', array('label' => 'Название:'));
 // echo $this->Form->input('News.title.kz', array('label' => 'Название kz:'));
 echo $this->Form->input('date', array('label' => 'Дата:'));
 echo $this->Form->input('body', array('label' => 'Текст:', 'id' => 'editor'));
+if($this->request->query['lang'] == 'ru'){ ?>
+	<img src="/img/news/thumbs/<?=$data['Leadership']['img']?>">
+	<? echo $this->Form->input('img', array('label' => 'Картинка:', 'type' => 'file'));
+}
 ?>
 <div class="edit_bot">
-<img src="/img/news/thumbs/<?=$data['News']['img']?>">
+
 	<div class="bot_r">
 	<?
-	echo $this->Form->input('img', array('label' => 'Картинка:', 'type' => 'file'));
 	echo $this->Form->input('keywords', array('label' => 'Ключевые слова:'));
 	echo $this->Form->input('description', array('label' => 'Описание:'));
 	echo $this->Form->input('id');

@@ -71,7 +71,7 @@ class LeadershipsController extends AppController{
 			// debug($this->Leadership->locale);
 			// debug($this->request->data);
 			$data1 = $this->request->data['Leadership'];
-			if(!$data1['img']['name']){
+			if(isset($data1['img']['name']) && !$data1['img']['name']){
 				unset($data1['img']);
 			}
 
