@@ -25,11 +25,11 @@
 			</h2>
 			<ul class="gallery_ul">
 				<?php if(empty($data)): ?>
-					<p>В данном разеде еще нету информации</p> 
+					<p><?php echo __('В данном разеде еще нету информации') ?></p> 
 				<?php else: ?>
 					<?php foreach ($data as $item) :?>
 						<li>
-							<a class="fancybox" href="#"><img src="/img/gallery/<?=$item['Gallery']['img'] ?>" alt="<?=$item['Gallery']['title'] ?>" /></a>
+							<a class="fancybox" href="/img/gallery/<?=$item['Gallery']['img'] ?>"><img src="/img/gallery/<?=$item['Gallery']['img'] ?>" alt="<?=$item['Gallery']['title'] ?>" /></a>
 							<a class="heading fancybox" href="#"><?=$item['Gallery']['title'] ?></a>
 					    </li>
 			    	<?php endforeach; ?>
