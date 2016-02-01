@@ -8,7 +8,7 @@
 						<?=$post['News']['body']?>
 					</div>
 					<aside class="aside">
-			<h5>Остальные новости</h5>
+			<h5><?php echo __('Остальные новости')?></h5>
 			<ul class="ul_news">
 				<?php foreach($news as $item): ?>
 				<li>

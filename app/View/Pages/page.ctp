@@ -6,7 +6,7 @@
 			<?php echo $page['Page']['body'] ?>
 		</div>
 		<aside class="aside">
-			<h5>Актуальные новости</h5>
+			<h5><?php echo __('Актуальные новости'); ?></h5>
 			<ul class="ul_news">
 				<?php foreach($news as $item): ?>
 				<li>

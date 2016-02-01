@@ -2,7 +2,7 @@
 <section class="cr bg_w">	
 	<div class="box content">
 		<div class="gallery">
-			<h2>Новости</h2>
+			<h2><?php echo __('Новости')?></h2>
 			<ul class="gallery_ul">
 			<?php foreach ($data as $item) : ?>
 				<li>

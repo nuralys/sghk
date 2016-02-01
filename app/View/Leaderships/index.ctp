@@ -9,10 +9,10 @@
 							<div class="pr_text">
 								<div class="wr">
 									<a class="heading" href="/<?=$lang?>leaderships/view/<?=$item['Leadership']['id'] ?>"><?=$item['Leadership']['title'] ?></a>
-									<p class="up_des">Занимаемая должность: <?=$item['Leadership']['position'] ?></span>
-									<p class="date">Дата рождения: <?=$item['Leadership']['date_berth'] ?></p>
+									<p class="up_des"><?php echo __('Занимаемая должность')?>: <?=$item['Leadership']['position'] ?></span>
+									<p class="date"><?php echo __('Дата рождения')?>: <?=$item['Leadership']['date_berth'] ?></p>
 									<p><?= $this->Text->truncate(strip_tags($item['Leadership']['body']), 1000, array('ellipsis' => '...', 'exact' => true)) ?></p>
-									<a class="read_more clearfix" href="/<?=$lang?>leaderships/view/<?=$item['Leadership']['id'] ?>">Читать полностью</a>
+									<a class="read_more clearfix" href="/<?=$lang?>leaderships/view/<?=$item['Leadership']['id'] ?>"><?php echo __('Читать полностью')?></a>
 								</div>
 							</div>
 						</li>
