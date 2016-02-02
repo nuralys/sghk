@@ -8,13 +8,13 @@
 		<div class="fr_col">
 			<nav>
 				<ul class="f_nav">
-					<li class="active"><a href="/"><?php echo __('Главная'); ?></a></li>
-					<li><a href="news.html"><?php echo __('Новости'); ?></a></li>
-					<li><a href="#"><?php echo __('Предприятия'); ?></a></li>
-					<li><a href="#"><?php echo __('Продукция'); ?></a></li>
-					<li><a href="#"><?php echo __('Клиенты'); ?></a></li>
-					<li><a href="#"><?php echo __('Галерея'); ?></a></li>
-					<li><a href="#"><?php echo __('Контакты'); ?></a></li>
+					<li><a href="/<?=$lang?>"><?php echo __('Главная'); ?></a></li>
+					<li><a href="/<?=$lang?>news"><?php echo __('Новости'); ?></a></li>
+					<!-- <li><a href="#"><?php echo __('Предприятия'); ?></a></li> -->
+					<li><a href="/<?=$lang?>page/products"><?php echo __('Продукция'); ?></a></li>
+					<li><a href="/<?=$lang?>clients"><?php echo __('Партнеры'); ?></a></li>
+					<!-- <li><a href="#"><?php echo __('Галерея'); ?></a></li> -->
+					<li><a href="/<?=$lang?>page/contacts"><?php echo __('Контакты'); ?></a></li>
 				</ul>
 			</nav>
 			<div class="foot_text">
